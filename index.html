@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT Arlie Labora Utama — HR & Financial Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- SIDEBAR -->
+<!-- ===== SIDEBAR ===== -->
 <aside class="sidebar">
   <div class="sidebar-brand">
     <div class="brand-logo">
@@ -29,10 +28,6 @@
     <a class="nav-item active" onclick="navigate('dashboard')">
       <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
       Dashboard
-    </a>
-    <a class="nav-item" onclick="navigate('analytics')">
-      <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      Analytics 3D
     </a>
     <div class="nav-group-label">SDM / HR</div>
     <a class="nav-item" onclick="navigate('employees')">
@@ -73,7 +68,7 @@
   </div>
 </aside>
 
-<!-- MAIN -->
+<!-- ===== MAIN ===== -->
 <main class="main">
   <header class="header">
     <div class="header-left">
@@ -122,15 +117,14 @@
           <div class="stat-change up">↑ Diproses hari ini</div>
         </div>
         <div class="stat-card">
-          <div class="stat-card-accent red"></div>
-          <div class="stat-icon red"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="stat-card-accent purple"></div>
+          <div class="stat-icon purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
           <div class="stat-value">Rp 341M</div>
           <div class="stat-label">Profit Bersih April</div>
           <div class="stat-change up">↑ +8.7% MoM</div>
         </div>
       </div>
 
-      <!-- Cashflow Bar Chart + Activity -->
       <div class="grid-3-1" style="margin-bottom:16px">
         <div class="card">
           <div class="card-header">
@@ -138,52 +132,49 @@
               <div class="card-title">Cashflow Bulanan 2025</div>
               <div class="card-sub">Pendapatan vs Pengeluaran vs Profit Bersih</div>
             </div>
-            <div style="display:flex;gap:6px">
-              <button class="btn btn-ghost" style="font-size:0.7rem;padding:5px 10px" onclick="toggleChartType()">Ganti Tampilan</button>
-            </div>
+            <button class="btn btn-ghost" style="font-size:0.7rem;padding:5px 10px" onclick="toggleChartType()">Ganti Tampilan</button>
           </div>
           <div class="card-body" style="padding-bottom:12px">
             <canvas id="cashflowChart" height="220"></canvas>
           </div>
           <div class="legend">
-            <div class="legend-item"><div class="legend-dot" style="background:#0F8B5A"></div>Pendapatan</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#C83232"></div>Pengeluaran</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#1B4FD8"></div>Profit Bersih</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#1A8C5B"></div>Pendapatan</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#C0392B"></div>Pengeluaran</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#5C2FA0"></div>Profit Bersih</div>
           </div>
         </div>
         <div class="card">
           <div class="card-header"><div class="card-title">Aktivitas Terkini</div></div>
           <div class="card-body" style="padding-bottom:8px">
-            <div class="activity-item"><div class="act-dot" style="background:#0F8B5A"></div><div><div class="act-text">Payroll April berhasil diproses untuk 47 karyawan</div><div class="act-time">2 jam yang lalu</div></div></div>
-            <div class="activity-item"><div class="act-dot" style="background:#1B4FD8"></div><div><div class="act-text">Rizky Fadhillah mengajukan cuti 3 hari</div><div class="act-time">4 jam yang lalu</div></div></div>
-            <div class="activity-item"><div class="act-dot" style="background:#C87400"></div><div><div class="act-text">Laporan keuangan Q1 siap diunduh</div><div class="act-time">Kemarin, 15:30</div></div></div>
-            <div class="activity-item"><div class="act-dot" style="background:#C83232"></div><div><div class="act-text">2 karyawan absen tanpa keterangan hari ini</div><div class="act-time">Kemarin, 09:00</div></div></div>
-            <div class="activity-item"><div class="act-dot" style="background:#0F8B5A"></div><div><div class="act-text">Karyawan baru: Dewi Kusuma — Marketing</div><div class="act-time">2 hari lalu</div></div></div>
+            <div class="activity-item"><div class="act-dot" style="background:#1A8C5B"></div><div><div class="act-text">Payroll April berhasil diproses untuk 47 karyawan</div><div class="act-time">2 jam yang lalu</div></div></div>
+            <div class="activity-item"><div class="act-dot" style="background:#3D5AF1"></div><div><div class="act-text">Rizky Fadhillah mengajukan cuti 3 hari</div><div class="act-time">4 jam yang lalu</div></div></div>
+            <div class="activity-item"><div class="act-dot" style="background:#B87400"></div><div><div class="act-text">Laporan keuangan Q1 siap diunduh</div><div class="act-time">Kemarin, 15:30</div></div></div>
+            <div class="activity-item"><div class="act-dot" style="background:#C0392B"></div><div><div class="act-text">2 karyawan absen tanpa keterangan</div><div class="act-time">Kemarin, 09:00</div></div></div>
+            <div class="activity-item"><div class="act-dot" style="background:#1A8C5B"></div><div><div class="act-text">Karyawan baru: Dewi Kusuma — Marketing</div><div class="act-time">2 hari lalu</div></div></div>
           </div>
         </div>
       </div>
 
-      <!-- Dept Distribution + Cashflow Donut -->
-      <div class="grid-3" style="margin-bottom:0">
+      <div class="grid-3">
         <div class="card">
           <div class="card-header"><div class="card-title">Distribusi Karyawan per Dept.</div></div>
           <div class="card-body">
             <div class="donut-wrap">
               <div class="donut-chart-el">
                 <svg class="donut-svg" width="90" height="90" viewBox="0 0 90 90">
-                  <circle cx="45" cy="45" r="35" fill="none" stroke="#F4F2EE" stroke-width="12"/>
-                  <circle cx="45" cy="45" r="35" fill="none" stroke="#1B4FD8" stroke-width="12" stroke-dasharray="55 165" stroke-dashoffset="0"/>
-                  <circle cx="45" cy="45" r="35" fill="none" stroke="#0F8B5A" stroke-width="12" stroke-dasharray="40 165" stroke-dashoffset="-55"/>
-                  <circle cx="45" cy="45" r="35" fill="none" stroke="#C87400" stroke-width="12" stroke-dasharray="35 165" stroke-dashoffset="-95"/>
-                  <circle cx="45" cy="45" r="35" fill="none" stroke="#C83232" stroke-width="12" stroke-dasharray="35 165" stroke-dashoffset="-130"/>
+                  <circle cx="45" cy="45" r="35" fill="none" stroke="#F0EDF8" stroke-width="12"/>
+                  <circle cx="45" cy="45" r="35" fill="none" stroke="#3D5AF1" stroke-width="12" stroke-dasharray="55 165" stroke-dashoffset="0"/>
+                  <circle cx="45" cy="45" r="35" fill="none" stroke="#1A8C5B" stroke-width="12" stroke-dasharray="40 165" stroke-dashoffset="-55"/>
+                  <circle cx="45" cy="45" r="35" fill="none" stroke="#B87400" stroke-width="12" stroke-dasharray="35 165" stroke-dashoffset="-95"/>
+                  <circle cx="45" cy="45" r="35" fill="none" stroke="#C0392B" stroke-width="12" stroke-dasharray="35 165" stroke-dashoffset="-130"/>
                 </svg>
                 <div class="donut-center"><div class="donut-pct">47</div><div class="donut-label-sm">Total</div></div>
               </div>
               <div class="donut-legend">
-                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#1B4FD8"></div>Teknologi — 16</div>
-                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#0F8B5A"></div>Marketing — 12</div>
-                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#C87400"></div>Operasional — 10</div>
-                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#C83232"></div>Keuangan — 9</div>
+                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#3D5AF1"></div>Teknologi — 16</div>
+                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#1A8C5B"></div>Marketing — 12</div>
+                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#B87400"></div>Operasional — 10</div>
+                <div class="donut-leg-item"><div class="donut-leg-dot" style="background:#C0392B"></div>Keuangan — 9</div>
               </div>
             </div>
           </div>
@@ -193,15 +184,15 @@
           <div class="card-body">
             <div style="display:flex;flex-direction:column;gap:12px">
               <div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:0.78rem;font-weight:600">Hadir</span><span class="mono" style="font-size:0.78rem;color:var(--c-green)">42 / 47</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:0.78rem;font-weight:600">Hadir</span><span class="mono" style="font-size:0.77rem;color:var(--c-green)">42 / 47</span></div>
                 <div class="budget-track"><div class="budget-fill" style="width:89%;background:var(--c-green)"></div></div>
               </div>
               <div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:0.78rem;font-weight:600">Cuti Resmi</span><span class="mono" style="font-size:0.78rem;color:var(--c-amber)">3 / 47</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:0.78rem;font-weight:600">Cuti Resmi</span><span class="mono" style="font-size:0.77rem;color:var(--c-amber)">3 / 47</span></div>
                 <div class="budget-track"><div class="budget-fill" style="width:6%;background:var(--c-amber)"></div></div>
               </div>
               <div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:0.78rem;font-weight:600">Tidak Hadir</span><span class="mono" style="font-size:0.78rem;color:var(--c-red)">2 / 47</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:0.78rem;font-weight:600">Tidak Hadir</span><span class="mono" style="font-size:0.77rem;color:var(--c-red)">2 / 47</span></div>
                 <div class="budget-track"><div class="budget-fill" style="width:4%;background:var(--c-red)"></div></div>
               </div>
             </div>
@@ -216,61 +207,21 @@
       </div>
     </div>
 
-    <!-- ===== ANALYTICS 3D ===== -->
-    <div class="page" id="page-analytics">
-      <div class="card" style="margin-bottom:16px">
-        <div class="card-header">
-          <div>
-            <div class="card-title">Visualisasi Cashflow 3D — Jan s/d Apr 2025</div>
-            <div class="card-sub">Bar 3D interaktif: Pendapatan · Pengeluaran · Profit per bulan</div>
-          </div>
-          <button class="btn btn-ghost" onclick="toggleRotate()" style="font-size:0.78rem">⟳ Toggle Rotasi</button>
-        </div>
-        <div class="canvas-3d-wrap">
-          <div id="cashflow3d-full" style="height:460px;cursor:grab;"></div>
-        </div>
-        <div class="legend" style="padding:14px 18px">
-          <div class="legend-item"><div class="legend-dot" style="background:#2AE890"></div>Pendapatan</div>
-          <div class="legend-item"><div class="legend-dot" style="background:#FF5A6A"></div>Pengeluaran</div>
-          <div class="legend-item"><div class="legend-dot" style="background:#5B9EFF"></div>Profit Bersih</div>
-          <div style="margin-left:auto;font-size:0.72rem;color:rgba(255,255,255,0.35);background:var(--sidebar-bg);padding:4px 10px;border-radius:99px">Drag untuk memutar · Scroll untuk zoom</div>
-        </div>
-      </div>
-      <div class="grid-3">
-        <div class="card"><div class="card-header"><div class="card-title">Jan 2025</div></div><div class="card-body">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:0.78rem">Pendapatan</span><span class="mono" style="font-size:0.78rem;color:var(--c-green)">Rp 680M</span></div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:0.78rem">Pengeluaran</span><span class="mono" style="font-size:0.78rem;color:var(--c-red)">Rp 421M</span></div>
-          <div style="display:flex;justify-content:space-between"><span style="font-size:0.78rem;font-weight:700">Profit</span><span class="mono" style="font-size:0.78rem;color:var(--c-blue);font-weight:700">Rp 259M</span></div>
-        </div></div>
-        <div class="card"><div class="card-header"><div class="card-title">Feb 2025</div></div><div class="card-body">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:0.78rem">Pendapatan</span><span class="mono" style="font-size:0.78rem;color:var(--c-green)">Rp 710M</span></div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:0.78rem">Pengeluaran</span><span class="mono" style="font-size:0.78rem;color:var(--c-red)">Rp 447M</span></div>
-          <div style="display:flex;justify-content:space-between"><span style="font-size:0.78rem;font-weight:700">Profit</span><span class="mono" style="font-size:0.78rem;color:var(--c-blue);font-weight:700">Rp 263M</span></div>
-        </div></div>
-        <div class="card"><div class="card-header"><div class="card-title">Mar 2025</div></div><div class="card-body">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:0.78rem">Pendapatan</span><span class="mono" style="font-size:0.78rem;color:var(--c-green)">Rp 795M</span></div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:0.78rem">Pengeluaran</span><span class="mono" style="font-size:0.78rem;color:var(--c-red)">Rp 493M</span></div>
-          <div style="display:flex;justify-content:space-between"><span style="font-size:0.78rem;font-weight:700">Profit</span><span class="mono" style="font-size:0.78rem;color:var(--c-blue);font-weight:700">Rp 302M</span></div>
-        </div></div>
-      </div>
-    </div>
-
     <!-- ===== EMPLOYEES ===== -->
     <div class="page" id="page-employees">
       <div class="card">
         <div class="card-header">
           <div>
-            <div class="card-title">Data Karyawan</div>
-            <div class="card-sub">47 karyawan aktif terdaftar di PT Arlie Labora Utama</div>
+            <div class="card-title">Daftar Karyawan</div>
+            <div class="card-sub">47 karyawan aktif — PT Arlie Labora Utama</div>
           </div>
-          <div style="display:flex;gap:8px">
-            <input type="text" placeholder="🔍 Cari karyawan..." style="width:200px" oninput="filterEmployees(this.value)">
-            <button class="btn btn-primary">+ Tambah</button>
-          </div>
+          <input type="text" placeholder="Cari nama / departemen..." style="width:220px;padding:7px 12px;font-size:0.78rem" oninput="filterEmployees(this.value)">
         </div>
         <div class="table-wrapper">
           <table>
-            <thead><tr><th>Karyawan</th><th>Jabatan</th><th>Departemen</th><th>Gaji Pokok</th><th>Status</th><th>Bergabung</th><th>Aksi</th></tr></thead>
+            <thead>
+              <tr><th>Nama</th><th>Jabatan</th><th>Departemen</th><th>Gaji Pokok</th><th>Status</th><th>Bergabung</th><th></th></tr>
+            </thead>
             <tbody id="employeeBody"></tbody>
           </table>
         </div>
@@ -289,7 +240,8 @@
           </div>
           <div class="card-body">
             <div class="payroll-form">
-              <div class="form-group full"><label>Pilih Karyawan</label>
+              <div class="form-group full">
+                <label>Pilih Karyawan</label>
                 <select id="payEmp" onchange="prefillEmployee()">
                   <option value="">-- Pilih karyawan --</option>
                   <option value="budi">Budi Santoso — Teknologi</option>
@@ -300,35 +252,60 @@
               </div>
               <div class="form-group"><label>Gaji Pokok (Rp)</label><input type="number" id="payBase" oninput="calcPayroll()" placeholder="0"></div>
               <div class="form-group"><label>Tunjangan Jabatan (Rp)</label><input type="number" id="payAllow" oninput="calcPayroll()" placeholder="0"></div>
-              <div class="form-group"><label>Jam Lembur</label><input type="number" id="payOT" oninput="calcPayroll()" placeholder="0"></div>
-              <div class="form-group"><label>Tarif Lembur / jam (Rp)</label><input type="number" id="payOTRate" oninput="calcPayroll()" placeholder="0"></div>
-              <div class="form-group"><label>Potongan BPJS (%)</label><input type="number" id="payBPJS" value="5" oninput="calcPayroll()"></div>
-              <div class="form-group"><label>Potongan PPh21 (%)</label><input type="number" id="payTax" value="5" oninput="calcPayroll()"></div>
-              <div class="form-group"><label>Periode</label>
-                <select id="payPeriod"><option>April 2025</option><option>Maret 2025</option></select>
+              <div class="form-group">
+                <label>Jam Lembur</label>
+                <input type="number" id="payOT" oninput="calcPayroll()" placeholder="0" min="0">
+              </div>
+              <div class="form-group">
+                <label>Tarif Lembur / jam (Rp)</label>
+                <input type="number" id="payOTRate" oninput="calcPayroll()" placeholder="0">
+              </div>
+              <div class="form-group"><label>Potongan BPJS (%)</label><input type="number" id="payBPJS" value="5" oninput="calcPayroll()" min="0" max="100"></div>
+              <div class="form-group"><label>Potongan PPh21 (%)</label><input type="number" id="payTax" value="5" oninput="calcPayroll()" min="0" max="100"></div>
+              <div class="form-group">
+                <label>Periode</label>
+                <select id="payPeriod" onchange="calcPayroll()">
+                  <option>April 2025</option>
+                  <option>Maret 2025</option>
+                  <option>Februari 2025</option>
+                </select>
               </div>
               <div class="form-group"><label>Bonus / Insentif (Rp)</label><input type="number" id="payBonus" oninput="calcPayroll()" placeholder="0"></div>
             </div>
+
             <div class="payroll-result">
+              <div style="font-size:0.65rem;font-weight:800;color:var(--c-purple-mid);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px">Rincian Pembayaran</div>
               <div class="result-grid">
                 <div class="result-item"><div class="result-label">Gaji Pokok</div><div class="result-value" id="resBase">Rp 0</div></div>
                 <div class="result-item"><div class="result-label">Tunjangan</div><div class="result-value" id="resAllow">Rp 0</div></div>
                 <div class="result-item"><div class="result-label">Uang Lembur</div><div class="result-value" id="resOT">Rp 0</div></div>
                 <div class="result-item"><div class="result-label">Bonus</div><div class="result-value" id="resBonus">Rp 0</div></div>
-                <div class="result-item"><div class="result-label">Potongan BPJS</div><div class="result-value" id="resBPJS" style="color:#F5A623">— Rp 0</div></div>
-                <div class="result-item"><div class="result-label">Potongan PPh21</div><div class="result-value" id="resTax" style="color:#F5A623">— Rp 0</div></div>
+                <div class="result-item"><div class="result-label">Potongan BPJS</div><div class="result-value" id="resBPJS" style="color:var(--c-red)">— Rp 0</div></div>
+                <div class="result-item"><div class="result-label">Potongan PPh21</div><div class="result-value" id="resTax" style="color:var(--c-red)">— Rp 0</div></div>
               </div>
               <div class="result-total">
-                <div><div class="result-total-label">GAJI BERSIH DITERIMA</div></div>
+                <div>
+                  <div class="result-total-label">Gaji Bersih Diterima</div>
+                </div>
                 <div class="result-total-value" id="resNet">Rp 0</div>
               </div>
               <div class="payroll-actions">
-                <button class="btn btn-export" onclick="showToast('Mengekspor PDF slip gaji...')">📄 Ekspor PDF</button>
-                <button class="btn btn-email" onclick="openEmailModal()">✉️ Kirim Email</button>
+                <button class="btn btn-export" onclick="exportPayrollPDF()">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                  Ekspor PDF
+                </button>
+                <button class="btn btn-email" onclick="openEmailModal()">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Kirim Email
+                </button>
+              </div>
+              <div id="emailSuccessBadge" class="email-status hidden">
+                <div class="email-status-dot"></div> Email berhasil dikirim
               </div>
             </div>
           </div>
         </div>
+
         <div class="card">
           <div class="card-header">
             <div>
@@ -383,7 +360,7 @@
                 <div class="stat-label">Cuti Resmi</div>
               </div>
               <div class="stat-card" style="padding:14px">
-                <div class="stat-card-accent blue"></div>
+                <div class="stat-card-accent purple"></div>
                 <div class="stat-value" style="font-size:1.4rem">96%</div>
                 <div class="stat-label">Tingkat Kehadiran</div>
               </div>
@@ -421,9 +398,9 @@
           <canvas id="financialChart" height="200"></canvas>
         </div>
         <div class="legend">
-          <div class="legend-item"><div class="legend-dot" style="background:#0F8B5A"></div>Pendapatan</div>
-          <div class="legend-item"><div class="legend-dot" style="background:#C83232"></div>Pengeluaran</div>
-          <div class="legend-item"><div class="legend-dot" style="background:#1B4FD8"></div>Profit Bersih</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#1A8C5B"></div>Pendapatan</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#C0392B"></div>Pengeluaran</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#5C2FA0"></div>Profit Bersih</div>
         </div>
       </div>
       <div class="card">
@@ -459,7 +436,7 @@
             <div class="budget-item">
               <div class="budget-row"><div class="budget-dept">Operasional</div><div class="budget-nums">Rp 95M / Rp 90M</div></div>
               <div class="budget-track"><div class="budget-fill" style="width:100%;background:var(--c-red)"></div></div>
-              <div style="font-size:0.68rem;color:var(--c-red);margin-top:3px">⚠ Melebihi anggaran +5.6%</div>
+              <div style="font-size:0.67rem;color:var(--c-red);margin-top:4px;font-weight:600">⚠ Melebihi anggaran +5.6%</div>
             </div>
             <div class="budget-item">
               <div class="budget-row"><div class="budget-dept">Keuangan & Admin</div><div class="budget-nums">Rp 52M / Rp 70M</div></div>
@@ -467,14 +444,14 @@
             </div>
             <div class="budget-item">
               <div class="budget-row"><div class="budget-dept">SDM / HR</div><div class="budget-nums">Rp 38M / Rp 50M</div></div>
-              <div class="budget-track"><div class="budget-fill" style="width:76%;background:var(--c-purple)"></div></div>
+              <div class="budget-track"><div class="budget-fill" style="width:76%;background:var(--c-purple-mid)"></div></div>
             </div>
           </div>
         </div>
         <div class="card">
           <div class="card-header"><div class="card-title">Ringkasan Anggaran</div></div>
           <div class="card-body">
-            <div class="stat-card" style="margin-bottom:12px;padding:14px">
+            <div class="stat-card" style="margin-bottom:14px;padding:14px">
               <div class="stat-card-accent green"></div>
               <div class="stat-value" style="font-size:1.2rem">Rp 405M</div>
               <div class="stat-label">Total Terpakai dari Rp 470M</div>
@@ -501,13 +478,23 @@
             </div>
           </div>
           <div class="settings-section">
-            <div class="settings-label">Konfigurasi Sistem</div>
+            <div class="settings-label">Konfigurasi Payroll Default</div>
             <div class="payroll-form">
               <div class="form-group"><label>Default BPJS (%)</label><input type="number" value="5"></div>
               <div class="form-group"><label>Default PPh21 (%)</label><input type="number" value="5"></div>
             </div>
           </div>
-          <button class="btn btn-primary" onclick="showToast('Pengaturan berhasil disimpan!')">Simpan Perubahan</button>
+          <div class="settings-section">
+            <div class="settings-label">Integrasi Email (SMTP)</div>
+            <div class="payroll-form">
+              <div class="form-group"><label>SMTP Host</label><input type="text" placeholder="smtp.perusahaan.com"></div>
+              <div class="form-group"><label>SMTP Port</label><input type="number" placeholder="587"></div>
+              <div class="form-group"><label>Email Pengirim</label><input type="email" placeholder="noreply@alu.co.id"></div>
+              <div class="form-group"><label>Password</label><input type="text" placeholder="••••••••"></div>
+            </div>
+            <div style="font-size:0.71rem;color:var(--c-text-3);margin-top:-8px;margin-bottom:12px">Konfigurasi SMTP untuk pengiriman slip gaji otomatis via email.</div>
+          </div>
+          <button class="btn btn-primary" onclick="showToast('✓ Pengaturan berhasil disimpan!')">Simpan Perubahan</button>
         </div>
       </div>
     </div>
@@ -515,18 +502,35 @@
   </div>
 </main>
 
-<!-- EMAIL MODAL -->
+<!-- ===== EMAIL MODAL ===== -->
 <div class="modal-overlay hidden" id="emailModal">
   <div class="modal">
-    <div class="modal-title">✉️ Kirim Laporan via Email</div>
-    <div class="form-group" style="margin-bottom:12px"><label>Penerima</label><input type="email" id="emailTo" placeholder="email@perusahaan.com"></div>
-    <div class="form-group"><label>Subjek</label><input type="text" value="Laporan Keuangan PT Arlie Labora Utama — April 2025"></div>
+    <div class="modal-title">✉ Kirim Laporan via Email</div>
+    <div class="form-group" style="margin-bottom:12px">
+      <label>Penerima</label>
+      <input type="email" id="emailTo" placeholder="email@perusahaan.com">
+    </div>
+    <div class="form-group" style="margin-bottom:12px">
+      <label>Subjek</label>
+      <input type="text" id="emailSubject" value="Laporan Keuangan PT Arlie Labora Utama — April 2025">
+    </div>
+    <div class="form-group" style="margin-bottom:0">
+      <label>Pesan</label>
+      <textarea style="width:100%;min-height:70px;resize:vertical" placeholder="Terlampir laporan keuangan bulan ini..."></textarea>
+    </div>
+    <div style="font-size:0.67rem;color:var(--c-text-3);margin-top:10px">
+      📎 PDF laporan akan dilampirkan otomatis. Integrasi SMTP dikonfigurasi di Pengaturan.
+    </div>
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="closeEmailModal()">Batal</button>
-      <button class="btn btn-primary" onclick="simulateSendEmail()">Kirim</button>
+      <button class="btn btn-primary" onclick="simulateSendEmail()">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Kirim
+      </button>
     </div>
   </div>
 </div>
+
 <div class="toast-container" id="toastContainer"></div>
 
 <script src="script.js"></script>
